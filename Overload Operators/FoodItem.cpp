@@ -1,5 +1,6 @@
 #include "FoodItem.h"
 
+
 FoodItem::FoodItem()
 {
 	name = "no name";
@@ -71,6 +72,18 @@ bool operator<(const FoodItem &lhs, const FoodItem &rhs){
 
 bool operator>(const FoodItem &lhs, const FoodItem &rhs){
     return lhs.calories > rhs.calories;
+}
+
+bool operator>=(const FoodItem &lhs, const FoodItem &rhs){
+    return lhs.calories >= rhs.calories;
+    
+}
+bool operator<=(const FoodItem &lhs, const FoodItem &rhs){
+    return lhs.calories <= rhs.calories;
+}
+bool operator==(const FoodItem &lhs, const FoodItem &rhs){
+
+    return ((lhs.name == rhs.name) && (lhs.calories == rhs.calories) && (lhs.cost == rhs.cost));
 }
 
 FoodItem FoodItem::operator+(FoodItem &rhs){
